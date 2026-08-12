@@ -3,7 +3,7 @@
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
-Write-Host "Building SwiftMath (Unofficial GPUBooster Port)..." -ForegroundColor Cyan
+Write-Host "Building Rapidyne (Unofficial GPUBooster Port)..." -ForegroundColor Cyan
 Write-Host "(first build takes several minutes - it downloads and decompiles Minecraft)" -ForegroundColor DarkGray
 
 & "$PSScriptRoot\gradlew.bat" build -x test

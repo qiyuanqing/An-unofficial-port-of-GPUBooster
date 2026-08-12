@@ -1,4 +1,4 @@
-# SwiftMath — an unofficial GPUBooster port for NeoForge 26.1.2
+# Rapidyne — an unofficial GPUBooster port for NeoForge 26.1.2
 
 > **This is an unofficial, community port.** It is not created, endorsed, or
 > maintained by GPUBooster's original author, and is not affiliated with the
@@ -6,13 +6,16 @@
 > "GPUBooster" to avoid any confusion with an official release, and the icon
 > below carries a visible "unofficial" marker for the same reason.
 
-<p align="center"><img src="src/main/resources/icon.png" alt="SwiftMath icon: the original GPUBooster logo with a diagonal red UNOFFICIAL ribbon overlaid" width="388"></p>
+<p align="center"><img src="src/main/resources/icon.png" alt="Rapidyne icon: the original GPUBooster logo with a diagonal red UNOFFICIAL ribbon overlaid" width="388"></p>
 
-SwiftMath is an unofficial port of [GPUBooster](https://github.com/ITsMrToad/GPUBooster)
+Rapidyne is an unofficial port of [GPUBooster](https://github.com/ITsMrToad/GPUBooster)
 by **Mr.Toad** — originally a Fabric mod for Minecraft 1.21.1 — to **NeoForge on
 Minecraft 26.1.2**. The original project has not been updated to a NeoForge build
 or to a current Minecraft version, so this port fills that gap for the parts of
 it that could reasonably survive the jump.
+
+- **Unofficial port author:** qiyuanqing
+- **Original mod design and implementation:** Mr.Toad
 
 All credit for the original design and implementation goes to Mr.Toad. Any bugs
 introduced in this port are the porter's, not the original author's.
@@ -35,7 +38,7 @@ now-gone direct-GL surface:
   `Xoroshiro128PlusPlusRandom`), replacing vanilla's `MarsagliaPolarGaussian`.
 
 Both are toggleable in-game via NeoForge's built-in config screen
-(Mods → SwiftMath (Unofficial GPUBooster Port) → Config).
+(Mods → Rapidyne (Unofficial GPUBooster Port) → Config).
 
 ## What this port does *not* include
 
@@ -69,7 +72,7 @@ Requires JDK 25 (Minecraft 26.1.2 ships Java 25 to end users).
 ./gradlew build
 ```
 
-The built jar will be at `build/libs/swiftmath-<version>.jar`.
+The built jar will be at `build/libs/rapidyne-<version>.jar`.
 
 To launch a test client:
 
