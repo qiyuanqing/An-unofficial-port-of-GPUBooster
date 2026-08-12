@@ -1,14 +1,18 @@
 # Notice
 
-This project is an unofficial, unaffiliated NeoForge 26.1.2 port of
+**SwiftMath** is an unofficial, unaffiliated NeoForge 26.1.2 port of
 [GPUBooster](https://github.com/ITsMrToad/GPUBooster) by **Mr.Toad**, originally
 released for Fabric on Minecraft 1.21.1 under the GNU General Public License v3.0.
+The name was changed from "GPUBooster" specifically to avoid implying this is an
+official release or endorsed by the original author; the mod icon also carries a
+visible "unofficial" overlay for the same reason.
 
 This port is licensed under the same license, GPL-3.0-only (see `LICENSE`).
 
 ## What changed from the original
 
-Modified starting 2026-08-12. Minecraft's renderer was substantially rewritten
+Modified starting 2026-08-12 (renamed to SwiftMath 2026-08-12). Minecraft's
+renderer was substantially rewritten
 between 1.21.1 and 26.1.2 (raw OpenGL calls in `Framebuffer`, `VertexBuffer`,
 `BufferBuilder`, and `ShaderProgram` were replaced by a backend-agnostic
 `GpuDevice`/`CommandEncoder` abstraction). As a result, this port only carries
