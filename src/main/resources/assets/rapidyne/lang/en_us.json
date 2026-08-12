@@ -1,0 +1,9 @@
+{
+  "rapidyne.config.fastRotateSingleAxis": "Fast single-axis rotation",
+  "rapidyne.config.fastRotateSingleAxis.tooltip": "Use Minecraft's lookup-table sin/cos for single-axis matrix rotations (rotateX/Y/Z, rotate around an arbitrary axis). Measured ~40% faster than vanilla JOML on the reference benchmark; results can vary by machine/JIT, so this can be turned off independently if it doesn't help on yours.",
+  "rapidyne.config.fastRotateCombined": "Fast combined-axis rotation",
+  "rapidyne.config.fastRotateCombined.tooltip": "Use Minecraft's lookup-table sin/cos for combined XYZ matrix rotations (rotateXYZ). Measured ~40% faster than vanilla JOML on the reference benchmark; results can vary by machine/JIT, so this can be turned off independently if it doesn't help on yours.",
+
+  "rapidyne.toast.welcome.title": "Rapidyne",
+  "rapidyne.toast.welcome.message": "Check Mods > Rapidyne > Config to adjust settings"
+}

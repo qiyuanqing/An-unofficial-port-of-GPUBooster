@@ -1,6 +1,5 @@
 package com.rapidyne.mixin;
 
-import com.rapidyne.RapidyneConfig;
 import com.rapidyne.math.GBFMatrix3f;
 import com.rapidyne.math.GBFMatrix4f;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -10,16 +9,18 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+// Always installs the GBF variants; each individual optimization (single-axis vs
+// combined-XYZ rotation) checks its own config toggle per call - see GBFMatrix4f/3f.
 @Mixin(PoseStack.Pose.class)
 public abstract class PoseMixin {
 
     @Redirect(method = "<init>", at = @At(value = "NEW", target = "org/joml/Matrix4f"))
     private Matrix4f rapidyne$fastPose() {
-        return RapidyneConfig.fastMathEnabled() ? new GBFMatrix4f() : new Matrix4f();
+        return new GBFMatrix4f();
     }
 
     @Redirect(method = "<init>", at = @At(value = "NEW", target = "org/joml/Matrix3f"))
     private Matrix3f rapidyne$fastNormal() {
-        return RapidyneConfig.fastMathEnabled() ? new GBFMatrix3f() : new Matrix3f();
+        return new GBFMatrix3f();
     }
 }

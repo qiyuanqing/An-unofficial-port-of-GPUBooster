@@ -22,12 +22,31 @@ logoFile="icon.png"
 authors="qiyuanqing (unofficial NeoForge 26.1.2 port); Mr.Toad (original GPUBooster mod, not affiliated with this port)"
 
 description='''
-Rapidyne is an unofficial NeoForge 26.1.2 port of GPUBooster. It carries over the
-loader-agnostic performance pieces (fast math, fast random) that don't depend on
-Minecraft's now-rewritten GpuDevice-based rendering backend. The original mod's
-direct-state-access VBO/EBO/FBO system has no equivalent in this version's
-renderer and is not included. Not affiliated with or endorsed by GPUBooster's
-original author.
+Rapidyne is an unofficial NeoForge 26.1.2 port of GPUBooster. It speeds up
+PoseStack matrix rotations using Minecraft's own lookup-table sin/cos instead
+of Math.sin/cos, verified element-for-element against real JOML and benchmarked
+faster. Single-axis and combined-XYZ rotation are independently toggleable in
+the config screen (Mods > Rapidyne > Config), both on by default. The original
+mod's direct-state-access VBO/EBO/FBO rendering system has no equivalent in
+26.1.2's rewritten renderer and is not included; its fast random number
+generator was also dropped after testing found it produced a statistically
+skewed distribution. Not affiliated with or endorsed by GPUBooster's original
+author.
+
+Changelog:
+0.3.0 - Split the fast-math toggle into two independent options (single-axis
+        vs combined-axis rotation). Removed a per-call allocation for a
+        further speed gain. Added English and Chinese localization.
+0.2.1 - Renamed SwiftMath to Rapidyne (name collision) and added author
+        credit. Fixed a bed-rendering bug by removing the original ported
+        fast-math code, which testing found produced wrong output on most
+        operations. Rewrote fast-math correctly using verified quaternion
+        delegation. Removed the fast random generator after finding it
+        statistically broken. Added compatibility hardening (mixins fail
+        gracefully instead of crashing on conflict) and a first-join
+        settings reminder.
+0.2.0 - Renamed to SwiftMath; added the unofficial-port icon overlay.
+0.1.0 - Initial NeoForge 26.1.2 port.
 '''
 
 [[mixins]]

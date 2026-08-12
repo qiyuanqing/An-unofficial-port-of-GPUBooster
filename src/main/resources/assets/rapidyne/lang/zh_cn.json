@@ -1,0 +1,9 @@
+{
+  "rapidyne.config.fastRotateSingleAxis": "单轴旋转加速",
+  "rapidyne.config.fastRotateSingleAxis.tooltip": "使用 Minecraft 自带的正弦/余弦查找表来加速单轴矩阵旋转运算（rotateX/Y/Z、绕任意轴旋转）。在参考测试机上比原版 JOML 快约 40%；实际效果因机器/JIT 而异，如果在你的设备上没有提升，可以单独关闭这一项。",
+  "rapidyne.config.fastRotateCombined": "组合轴旋转加速",
+  "rapidyne.config.fastRotateCombined.tooltip": "使用 Minecraft 自带的正弦/余弦查找表来加速组合 XYZ 矩阵旋转运算（rotateXYZ）。在参考测试机上比原版 JOML 快约 40%；实际效果因机器/JIT 而异，如果在你的设备上没有提升，可以单独关闭这一项。",
+
+  "rapidyne.toast.welcome.title": "Rapidyne",
+  "rapidyne.toast.welcome.message": "前往 模组 > Rapidyne > 设置 调整配置"
+}
